@@ -1,0 +1,45 @@
+! ---------[  xft  ] ---------
+Xft.dpi:		192
+Xft.antialias:		1
+Xft.hinting:		1
+Xft.hintstyle:		hintfull
+Xft.rgba:		rgb
+
+
+! ---------[ URxvt ] ---------
+URxvt*foreground: 	gray
+URxvt*background: 	[95]#2d2f2d
+URxvt*color0: 		#0a0a0a
+URxvt*color1: 		#ba8b8b
+URxvt*color2: 		#86af80
+URxvt*color3: 		#c6d01e
+URxvt*color4: 		#3c8ec4
+URxvt*color5: 		#9a70b2
+URxvt*color6: 		#9fc1cc
+URxvt*color7: 		rgb:a0/a0/a0
+URxvt*color8: 		#71a3b7
+URxvt*color9: 		#e5505f
+URxvt*color10: 		#8cba87
+URxvt.color11: 		#e0d95c
+URxvt*color12: 		#5899c4
+URxvt.color13: 		#ad73ba
+URxvt*color14:		#338eaa
+URxvt*color15:		#f7f7f2
+URxvt*colorBD:		#ffffff
+URxvt*cursorColor: 	#e0e080
+URxvt*throughColor: 	#8080f0
+URxvt*highlightColor: 	#f0f0f0
+URxvt*background: 	#000000
+URxvt*scrollBar:	off
+URxvt*font:		xft:DejaVu Sans Mono:pixelsize=32:antialias=true,xft:Miriam Mono CLM:pixelsize=32:antialias=true
+URxvt*visualBell:	on
+URxvt*perl-ext-common:  default,tabbedex,bidi
+URxvt*saveLines:	32768
+
+URxvt.bidi.enabled: 1
+URxvt.bidi.LRE: \\\\[([]
+URxvt.bidi.PDF: \\\\[)\\]]
+urxvt-vimh.bidi.par: true
+urxvt-vimh.cursorUnderline: true
+urxvt-vimh.bidi.ParReset: ^\\s*$|^\\\\begin|^\\\\\\[
+urxvt-vimh.bidi.ParResetAfter: ^\\\\end|\\\\\\]$
