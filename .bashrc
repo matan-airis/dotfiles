@@ -112,7 +112,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/.pretty_colors
+source ~/.bash_promptcolors
 
 if [ -f ~/.bash_env ]; then
     . ~/.bash_env
