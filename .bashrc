@@ -118,9 +118,6 @@ if [ -f ~/.bash_env ]; then
     . ~/.bash_env
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Created by `pipx` on 2023-03-14 09:33:08
-export PATH="$PATH:/home/mip/.local/bin"
+export PYENV_ROOT=$HOME/.pyenv
+command -v pyenv > /dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
