@@ -49,7 +49,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -398,16 +398,16 @@ clientkeys = gears.table.join(
         function (c)
             c.x = c.screen.workarea.x
             c.y = c.screen.workarea.y
-            c.width = c.screen.workarea.width
-            c.height = c.screen.workarea.height
+            c.width = c.screen.workarea.width - beautiful.border_width * 2
+            c.height = c.screen.workarea.height - beautiful.border_width * 2
         end ,
         { description = "virtually maximize in screen", group = "client"}),
     awful.key({ modkey,           }, "/",
         function (c)
             c.width = math.min(c.screen.workarea.width, c.width)
             c.height = math.min(c.screen.workarea.height, c.height)
-            c.x = c.screen.workarea.x + (c.screen.workarea.width - c.width) // 2
-            c.y = c.screen.workarea.y + (c.screen.workarea.height - c.height) // 2
+            c.x = c.screen.workarea.x + (c.screen.workarea.width - beautiful.border_width * 2 - c.width) // 2
+            c.y = c.screen.workarea.y + (c.screen.workarea.height - beautiful.border_width * 2 - c.height) // 2
         end ,
         { description = "center window in screen", group = "client"})
 )
